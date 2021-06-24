@@ -4,7 +4,6 @@
     {
         _MainTex ("Texture", 2D) = "white" {}
         _T ("Time", Float) = 0.0
-        _EndT ("EndTime", Float) = 1.0
         [MaterialToggle] _IsTransitionIn ("IsTransitionIn", Int) = 1
     }
     SubShader
@@ -42,16 +41,15 @@
 
             sampler2D _MainTex;
             float _T;
-            float _EndT;
-            bool _IsTransitionIn;
+            int _IsTransitionIn;
 
             //ここに遷移(入)を書く
             fixed4 TransitionIn(v2f i){
                 fixed4 col = tex2D(_MainTex, i.uv);
                 // just invert the colors
-                float a=_T/_EndT;
-                float3 x=col.rgb;
-                float3 y=1 - col.rgb;
+                float a=_T;
+                float3 x=1 - col.rgb;
+                float3 y=col.rgb;
                 col.rgb = x*(1-a)+y*a ;
                 return col;
             }
@@ -60,11 +58,12 @@
             fixed4 TransitionOut(v2f i){
                 fixed4 col = tex2D(_MainTex, i.uv);
                 // just invert the colors
-                float a=_T/_EndT;
-                float3 x=1 - col.rgb;
-                float3 y=col.rgb;
+                float a=_T;
+                float3 x=col.rgb;
+                float3 y=1 - col.rgb;
                 col.rgb = x*(1-a)+y*a ;
                 return col;
+                
             }
 
             fixed4 frag (v2f i) : SV_Target
