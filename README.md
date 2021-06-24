@@ -10,6 +10,9 @@
 - Assets/Shaders/Transition.shaderを参考にしてください
 - Propertyの`float _T`(遷移中time:0->1)がAnimationCurveを通して与えられるので、実装は線形にした方が分かりやすいです
 
+### ExampleShader
+- Transition:基本となるシェーダー　ネガポジ反転しかしない
+- Pixel:ピクセル化する
 ---
 
 # 実装で考えたこと
