@@ -40,7 +40,7 @@
             }
 
             sampler2D _MainTex;
-            float _T;
+            float _T;//while transition,_T=0->1
             int _IsTransitionIn;
 
             //ここに遷移(入)を書く

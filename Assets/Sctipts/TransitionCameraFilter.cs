@@ -36,17 +36,17 @@ public class TransitionCameraFilter : MonoBehaviour
         if (transitionInWhenSceneStart) StartTransition(true);
     }
 
-
-    private void LoadScene()
-    {
-        SceneManager.LoadScene(sceneName);
-    }
     private void OnRenderImage(RenderTexture src, RenderTexture dest)
     {
         foreach (var filter in filters)
         {
             Graphics.Blit(src, dest, filter);
         }
+    }
+
+    private void LoadScene()
+    {
+        SceneManager.LoadScene(sceneName);
     }
 
 
