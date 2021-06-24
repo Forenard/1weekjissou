@@ -6,9 +6,12 @@
 - public関数のStartTransition(bool isTransitionIn)を呼び出すと遷移が行われる
 
 ### 画面遷移用マテリアル
-Assets/Shaders/Transition.shaderを参考にしてください
+
+- Assets/Shaders/Transition.shaderを参考にしてください
+- Propertyの`float _T`(遷移中time:0->1)がAnimationCurveを通して与えられるので、実装は線形にした方が分かりやすいです
 
 ---
+
 # 実装で考えたこと
 
 ## 画面遷移の問題
