@@ -123,6 +123,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   transitionTime: 1
-  transitionInWhenSceneStart: 1
-  isLoadScene: 1
+  traInWhenSceneStart: 1
+  camStopWhenTraIn: 1
+  loadSceneWhenTraIn: 1
   sceneName: 

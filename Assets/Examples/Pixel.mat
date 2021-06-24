@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TransitionNega
-  m_Shader: {fileID: 4800000, guid: 2e29befa25d4d914ab12c2c9afbc2072, type: 3}
+  m_Name: Pixel
+  m_Shader: {fileID: 4800000, guid: 04eaa07609f3eb447a8b473f393faab6, type: 3}
   m_ShaderKeywords: _ISTRANSITIONIN_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -60,10 +60,10 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _EndT: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _Height: 540
     - _IsTransitionIn: 1
     - _Metallic: 0
     - _Mode: 0
@@ -74,6 +74,7 @@ Material:
     - _SrcBlend: 1
     - _T: 1
     - _UVSec: 0
+    - _Width: 960
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}

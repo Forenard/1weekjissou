@@ -296,6 +296,16 @@ PrefabInstance:
       propertyPath: sceneName
       value: from
       objectReference: {fileID: 0}
+    - target: {fileID: 6353738851441994916, guid: 0ca7e51e9e97ca34185c34939c933aef,
+        type: 3}
+      propertyPath: filters.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6353738851441994916, guid: 0ca7e51e9e97ca34185c34939c933aef,
+        type: 3}
+      propertyPath: filters.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: ee1bb3f2d1161fb40a7b9478a649b28f, type: 2}
     - target: {fileID: 6353738851441994917, guid: 0ca7e51e9e97ca34185c34939c933aef,
         type: 3}
       propertyPath: m_RootOrder

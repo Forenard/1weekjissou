@@ -40,10 +40,13 @@ public class TransitionCameraFilter : MonoBehaviour
     private void OnRenderImage(RenderTexture src, RenderTexture dest)
     {
         if (!useCameraTexture && camStopWhenTraIn) cameraTexture = src;
-        foreach (var filter in filters)
+        RenderTexture _tmp = cameraTexture;
+        for (int i = 0; i < filters.Count - 1; i++)
         {
-            Graphics.Blit(cameraTexture, dest, filter);
+            var filter = filters[i];
+            Graphics.Blit(_tmp, _tmp, filter);
         }
+        Graphics.Blit(_tmp, dest, filters[filters.Count - 1]);
     }
 
     private void LoadScene()
