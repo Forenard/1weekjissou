@@ -12,17 +12,18 @@ using UnityEngine.SceneManagement;
 public class TransitionCameraFilter : MonoBehaviour
 {
     [SerializeField] private List<Material> filters;
-    [SerializeField] private AnimationCurve animationCurve;
+    [SerializeField] private AnimationCurve animationCurve = AnimationCurve.Linear(0, 0, 1, 1);
 
-    [SerializeField] private float transitionTime;
-    [SerializeField] private bool transitionInWhenSceneStart;
-    [SerializeField] private bool isLoadScene;
+    [SerializeField] private float transitionTime = 1f;
+    [SerializeField] private bool traInWhenSceneStart = true;
+    [SerializeField] private bool camStopWhenTraIn = true;
+    [SerializeField] private bool loadSceneWhenTraIn = true;
     [SerializeField] private string sceneName;
 
     private float elapsedTime = 0f;
-    private IEnumerator coroutine;
+    private RenderTexture cameraTexture = null;
 
-
+    private bool useCameraTexture = false;
     ///<summary>
     ///StartTransition()を呼び出されると遷移を行う
     ///<summary>
@@ -33,14 +34,15 @@ public class TransitionCameraFilter : MonoBehaviour
 
     private void Start()
     {
-        if (transitionInWhenSceneStart) StartTransition(true);
+        if (traInWhenSceneStart) StartTransition(true);
     }
 
     private void OnRenderImage(RenderTexture src, RenderTexture dest)
     {
+        if (!useCameraTexture && camStopWhenTraIn) cameraTexture = src;
         foreach (var filter in filters)
         {
-            Graphics.Blit(src, dest, filter);
+            Graphics.Blit(cameraTexture, dest, filter);
         }
     }
 
@@ -63,6 +65,7 @@ public class TransitionCameraFilter : MonoBehaviour
         }
         else
         {
+            useCameraTexture = true;
             foreach (var filter in filters)
             {
                 filter.SetInt("_IsTransitionIn", 0);
@@ -79,7 +82,8 @@ public class TransitionCameraFilter : MonoBehaviour
                 {
                     filter.SetFloat("_T", animationCurve.Evaluate(1f));
                 }
-                if (isLoadScene && !isTransitionIn) LoadScene();
+                if (loadSceneWhenTraIn && !isTransitionIn) LoadScene();
+                useCameraTexture = false;
                 yield break;
             }
             foreach (var filter in filters)
