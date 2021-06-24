@@ -6,9 +6,12 @@
 - public関数のStartTransition(bool isTransitionIn)を呼び出すと遷移が行われる
 
 ### 画面遷移用マテリアル
-Assets/Shaders/Transition.shaderを参考にしてください
+
+- Assets/Shaders/Transition.shaderを参考にしてください
+- Propertyの`float _T`(遷移中time:0->1)がAnimationCurveを通して与えられるので、実装は線形にした方が分かりやすいです
 
 ---
+
 # 実装で考えたこと
 
 ## 画面遷移の問題
@@ -37,6 +40,7 @@ Assets/Shaders/Transition.shaderを参考にしてください
 - [HLSLビルドイン関数](https://docs.microsoft.com/ja-jp/previous-versions/direct-x/bb509611(v=vs.85)?redirectedfrom=MSDN)
 - [Shader共通化テクニック](https://light11.hatenadiary.com/entry/2019/01/20/013748)
 - [Editorの状態を監視](https://kan-kikuchi.hatenablog.com/entry/playModeStateChanged)
+- [easing](https://easings.net/)
 
 
 
