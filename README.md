@@ -31,5 +31,5 @@
 - public関数のStartTransition(bool isTransitionIn)を呼び出すと遷移が行われる
 
 ### 画面遷移用マテリアル
-TransitionShaderを参考にしてください
+Assets/Shaders/Transition.shaderを参考にしてください
 
