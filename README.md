@@ -40,6 +40,7 @@
 - [HLSLビルドイン関数](https://docs.microsoft.com/ja-jp/previous-versions/direct-x/bb509611(v=vs.85)?redirectedfrom=MSDN)
 - [Shader共通化テクニック](https://light11.hatenadiary.com/entry/2019/01/20/013748)
 - [Editorの状態を監視](https://kan-kikuchi.hatenablog.com/entry/playModeStateChanged)
+- [easing](http://probesys.blogspot.com/2011/10/useful-math-functions.html)
 
 
 
