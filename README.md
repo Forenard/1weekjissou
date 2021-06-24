@@ -23,3 +23,4 @@
 - [GLSLビルドイン関数](https://qiita.com/edo_m18/items/71f6064f3355be7e4f45)
 - [HLSLビルドイン関数](https://docs.microsoft.com/ja-jp/previous-versions/direct-x/bb509611(v=vs.85)?redirectedfrom=MSDN)
 - [Shader共通化テクニック](https://light11.hatenadiary.com/entry/2019/01/20/013748)
+- [Editorの状態を監視](https://kan-kikuchi.hatenablog.com/entry/playModeStateChanged)
