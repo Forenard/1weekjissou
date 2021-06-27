@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FBM
+  m_Name: DomainWarp
   m_Shader: {fileID: 4800000, guid: 72e9d125220532d4c8afc113951d6cc0, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
