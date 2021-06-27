@@ -53,8 +53,8 @@
             fixed4 TransitionIn(v2f i){
                 float invt=_T;
                 invt=pow(invt,5);
-                float w=floor(clamp(_Width*invt,4.0,_Width));
-                float h=floor(clamp(_Height*invt,2.0,_Height));
+                float w=floor(clamp(_Width*invt,1.0,_Width));
+                float h=floor(clamp(_Height*invt,1.0,_Height));
                 float2 grid;
                 grid.x = floor(i.uv.x * w) / w;
                 grid.y = floor(i.uv.y * h) / h;
@@ -66,8 +66,8 @@
             fixed4 TransitionOut(v2f i){
                 float invt=1-_T;
                 invt=pow(invt,5);
-                float w=floor(clamp(_Width*invt,4.0,_Width));
-                float h=floor(clamp(_Height*invt,2.0,_Height));
+                float w=floor(clamp(_Width*invt,1.0,_Width));
+                float h=floor(clamp(_Height*invt,1.0,_Height));
                 float2 grid;
                 grid.x = floor(i.uv.x * w) / w;
                 grid.y = floor(i.uv.y * h) / h;
@@ -79,7 +79,7 @@
             {
                 if(_IsTransitionIn==1){
                     return TransitionIn(i);
-                }else{
+                    }else{
                     return TransitionOut(i);
                 }
             }

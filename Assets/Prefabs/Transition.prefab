@@ -125,7 +125,7 @@ PrefabInstance:
         type: 3}
       propertyPath: filters.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7f4afcc191f46b64e8f7148590f4ae95, type: 2}
+      objectReference: {fileID: 2100000, guid: ee1bb3f2d1161fb40a7b9478a649b28f, type: 2}
     - target: {fileID: 6353738851441994917, guid: 0ca7e51e9e97ca34185c34939c933aef,
         type: 3}
       propertyPath: m_RootOrder
@@ -333,6 +333,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5980729887605820084, guid: 5ca46d4395a0e7948a098bc3dfbf8eb1,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 9.509999
+      objectReference: {fileID: 0}
+    - target: {fileID: 5980729887605820084, guid: 5ca46d4395a0e7948a098bc3dfbf8eb1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 4.7550006
+      objectReference: {fileID: 0}
+    - target: {fileID: 5980729887605820085, guid: 5ca46d4395a0e7948a098bc3dfbf8eb1,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5980729887605820085, guid: 5ca46d4395a0e7948a098bc3dfbf8eb1,
+        type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5980729887605820085, guid: 5ca46d4395a0e7948a098bc3dfbf8eb1,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5980729887808606100, guid: 5ca46d4395a0e7948a098bc3dfbf8eb1,
         type: 3}
