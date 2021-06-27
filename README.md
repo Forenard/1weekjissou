@@ -1,5 +1,8 @@
 ### 1weekjissou-画面遷移の実装
- 
+
+![](https://j.gifs.com/J8qALv.gif)
+
+![](https://j.gifs.com/lR5LjV.gif)
 # 使用方法
 - CameraにTransitionCameraFilterコンポーネントをアタッチする。
 - Filtersには、画面遷移用マテリアルを入れる(後述)
