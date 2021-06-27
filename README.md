@@ -18,7 +18,7 @@
 - Pixel:ピクセル化する
 - ColorBox:横から色が出てくる
 - ColorCircle:↑を極座標変換しただけ
-- FBM:フラクタルブラウン運動
+- DomainWarp:DomainWarp
 ---
 
 # 実装で考えたこと
